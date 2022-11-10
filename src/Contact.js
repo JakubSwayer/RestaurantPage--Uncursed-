@@ -1,15 +1,33 @@
 const Contact = () => {
+    let text =["Warszawska 17","03-400","Bytom","Poland","756 483 9211","restaurant@mail.com"]
 
     const div = document.createElement("div");
     div.id = "inside";
 
-    const h1 = document.createElement("h1");
-    h1.innerText = "Contact";
-    const  h2 = document.createElement("h2");
-    h2.innerText = "Try recipies we put all our hearts to create and cook";
+    const heading = document.createElement("h1");
+    heading.classList.add('contact-header');
+    heading.innerText = "Contact";
 
-    div.appendChild(h1);
-    div.appendChild(h2);
+    const contactBox = document.createElement("div");
+    contactBox.classList.add("contact-box");
+
+    const divOne = document.createElement("div");
+    const divTwo = document.createElement("div");
+
+    for (let i = 0; i < 4; i++) {
+        let p = document.createElement('p');
+        p.innerText = text[i];
+        divOne.appendChild(p);
+    }
+    for (let i = 4; i < 6; i++) {
+        let p = document.createElement('p');
+        p.innerText = text[i];
+        divTwo.appendChild(p);
+    }
+    div.appendChild(heading);
+    contactBox.appendChild(divOne);
+    contactBox.appendChild(divTwo);
+    div.appendChild(contactBox);
 
     return(div);
 }

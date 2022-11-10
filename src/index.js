@@ -4,7 +4,7 @@ import Menu from "./Menu.js";
 import Contact from "./Contact.js";
 
 document.getElementById('content').appendChild(mainPage());
-// document.querySelector('.container').appendChild(Home());
+document.querySelector('.container').appendChild(Home());
 
 const handleChange = (target) => {
     document.getElementById('inside').remove();
